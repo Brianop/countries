@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import {QueryClient, QueryClientProvider} from "react-query";
 
 import {Countries} from "../../pages/Countries";
@@ -9,7 +9,7 @@ import {ErrorPage} from "../../pages/ErrorPage";
 
 const queryClient = new QueryClient();
 
-const App = () =>  (
+const App = () =>
     <QueryClientProvider client={queryClient}>
         <Router>
             <Routes>
@@ -18,7 +18,6 @@ const App = () =>  (
                 <Route path='*' element={<ErrorPage/>}/>
             </Routes>
         </Router>
-    </QueryClientProvider>
-);
+    </QueryClientProvider>;
 
 export default App;

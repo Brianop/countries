@@ -14,24 +14,25 @@ const Countries = () => {
     };
 
     if (status === "loading") {
-        return <div> loading</div>;
+        return <div><h1>Loading...</h1></div>;
     }
 
     if (status === "error") {
-        return <div> error</div>
+        return <div><h1>Whoops something went wrong!</h1></div>;
     }
 
-    return (
-        <div>
-            <input type="text" value={searchFilter} onChange={handleSearchFilterChange}/>
-            <div className="countries">
-                {
-                    data.map(country =>
-                        <CountryCard key={country.name} name={country.name} flag={country.flag}/>)
-                }
-            </div>
+    return <div className="countries">
+        <div className="countries__input-container">
+            <label htmlFor="search">Filter:</label>
+            <input name="search" type="text" value={searchFilter} onChange={handleSearchFilterChange}/>
         </div>
-    );
+        <div className="countries__list-container">
+            {
+                data.map(country =>
+                    <CountryCard key={country.name} name={country.name} flag={country.flag}/>)
+            }
+        </div>
+    </div>;
 };
 
 export default Countries;

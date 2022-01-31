@@ -1,5 +1,25 @@
-.country-card__img{
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+@media (min-width: 40em) {
+    .country-list-card {
+        max-width: 15rem;
+    }
+}
+
+.country-list-card {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.country-list-card > a {
+    text-decoration: none;
+}
+
+.country-list-card__img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.country-list-card__name {
+    margin-left: 0.5rem;
+    color: #222222;
 }

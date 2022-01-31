@@ -1,4 +1,4 @@
-import {useQuery, } from "react-query";
+import {useQuery,} from "react-query";
 
 export const useCountry = (search) => {
     const fetchCountry = async ({queryKey}) => {

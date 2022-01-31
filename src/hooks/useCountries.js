@@ -11,7 +11,10 @@ export const useCountries = (filter) => {
         return response.json();
     }
 
-    return useQuery(['countries'], fetchCountries, {
-        select: (countries) => countries.map((country) => ({name: country.name.common, flag: country.flags.svg})).filter(country => country.name.toLowerCase().includes(filter.toLowerCase()))
+    return useQuery('countries', fetchCountries, {
+        select: (countries) => countries.map((country) => ({
+            name: country.name.common,
+            flag: country.flags.svg
+        })).filter(country => country.name.toLowerCase().includes(filter.toLowerCase()))
     });
 };

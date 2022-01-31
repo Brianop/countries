@@ -1,0 +1,21 @@
+.country {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    border: 1px solid #222222;
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.country-card__img {
+    align-self: center;
+    width: 10rem;
+    height: auto;
+}
